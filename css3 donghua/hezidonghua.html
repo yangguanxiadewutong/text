@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{margin: 0;padding: 0;}
+			.box div{width:200px;height:200px;line-height:200px;text-align:center;opacity:0.7;position: absolute;top:0;left:0;}
+			.box{
+				width:200px;height: 200px;
+				position: relative;
+				transform-style:preserve-3d;
+				/*perspective:1000px;*/
+				animation: donghua1 2s linear 0s,donghua2 1s linear 2s forwards,donghua3 7.5s linear 9s forwards;
+			}
+			@keyframes donghua1{
+				0%{transform: translate3d(0px,0px,0px);}
+				100%{transform: translate3d(500px,100px,0px);}
+			}
+			@keyframes donghua2{
+				0%{transform:  translate3d(500px,100px,0px) rotateX(0deg) rotateY(0deg);}
+				100%{transform: translate3d(500px,100px,0px) rotateX(45deg) rotateY(45deg);}
+			}
+			@keyframes donghua3{
+				0%{transform:  translate3d(500px,100px,0px) rotateX(45deg) rotateY(45deg);}
+				25%{transform:  translate3d(500px,100px,0px) rotateX(-135deg) rotateY(45deg);}
+				50%{transform:  translate3d(500px,100px,0px) rotateX(-370deg) rotateY(45deg);}
+				75%{transform:  translate3d(500px,100px,0px) rotateX(-370deg) rotateY(-135deg);}
+				100%{transform: translate3d(500px,100px,0px) rotateX(-370deg) rotateY(-380deg);}
+			}
+			.front{
+				background: red;
+				animation: dongq 1s linear 3s 1 forwards;
+			}
+			@keyframes dongq{
+				0%{transform:  translateZ(0px);}
+				100%{transform:  translateZ(100px);}
+			}
+			.back{
+				background: orange;
+				animation: dongh 1s linear 4s 1 forwards;
+			}
+			@keyframes dongh{
+				0%{transform: rotateY(0deg) translateZ(0px);}
+				100%{transform: rotateY(-180deg) translateZ(100px);}
+			}
+			.left{
+				background: yellow;
+				animation: dongz 1s linear 5s 1 forwards;
+			}
+			@keyframes dongz{
+				0%{transform: rotateY(0deg) translateZ(0px);}
+				100%{transform: rotateY(-90deg) translateZ(100px);}
+			}
+			.right{
+				background: green;
+				animation: dongy 1s linear 6s 1 forwards;
+			}
+			@keyframes dongy{
+				0%{transform: rotateY(0deg) translateZ(0px);}
+				100%{transform: rotateY(90deg) translateZ(100px);}
+			}
+			.top{
+				background: blue;
+				animation: dongs 1s linear 7s 1 forwards;
+			}
+			@keyframes dongs{
+				0%{transform: rotateX(0deg) translateZ(0px);}
+				100%{transform: rotateX(90deg) translateZ(100px);}
+			}
+			.bottom{
+				background: purple;
+				animation: dongx 1s linear 8s 1 forwards;
+			}
+			@keyframes dongx{
+				0%{transform: rotateX(0deg) translateZ(0px);}
+				100%{transform: rotateX(-90deg) translateZ(100px);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="front">front</div>
+			<div class="back">back</div>
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="top">top</div>
+			<div class="bottom">bottom</div>
+		</div>
+	</body>
+</html>

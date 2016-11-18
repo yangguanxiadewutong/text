@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{margin: 0;padding: 0;}
+			.box div{width:200px;height:200px;line-height:200px;text-align:center;opacity:0.7;position: absolute;top:0;left:0;}
+			.box{
+				width:200px;height: 200px;margin:100px auto;
+				position: relative;
+				transform-style:preserve-3d;
+				perspective:1000px;
+				transform: rotateX(45deg) rotateY(45deg);
+				/*transform: rotate3d(1,1,0,45deg);*/
+			}
+			.front{
+				background: red;
+				transform:  translateZ(100px);
+			}
+			.back{
+				background: orange;
+				transform: rotateY(-180deg) translateZ(100px);
+			}
+			.left{
+				background: yellow;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.right{
+				background: green;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.top{
+				background: blue;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.bottom{
+				background: purple;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="front">front</div>
+			<div class="back">back</div>
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="top">top</div>
+			<div class="bottom">bottom</div>
+		</div>
+	</body>
+</html>

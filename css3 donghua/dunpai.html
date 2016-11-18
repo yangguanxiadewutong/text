@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			section{width:100%;height:auto;background-color: #2AB561;}
+			.dun{width:424px;height: 482px;margin:0 auto;}
+			.dun img:nth-child(3n){margin-right:0;}
+			
+			.dun img:first-child{
+				transform: translate(-300px,300px) rotate(135deg);
+			}
+			.dun img:nth-child(2){
+				transform: translate(0px,320px) rotate(180deg);
+			}
+			.dun img:nth-child(3){
+				transform: translate(200px,200px) rotate(65deg);
+			}
+			.dun img:nth-child(4){
+				transform: translate(-300px,-200px) rotate(135deg);
+			}
+			.dun img:nth-child(6){
+				transform: translate(380px,160px) rotate(280deg);
+			}
+			.dun img:nth-child(7){
+				transform: translate(-120px,-200px) rotate(290deg);
+			}
+			.dun img:nth-child(8){
+				transform: translate(430px,-290px) rotate(379deg);
+			}
+			.dun img:nth-child(9){
+				transform: translate(-810px,-220px) rotate(95deg);
+			}
+			body .dun .addhuifu{
+				transform: translate(0,0) rotate(0deg);
+				transition: all 3s ease;
+			}
+			/*.dun:hover img{
+				transform: translate(0,0) rotate(0deg);
+				transition: all 3s;
+			}*/
+		</style>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function (){
+				$('.dun').mouseenter(function (){
+					$(this).find('img').addClass('addhuifu');
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<section>
+			<div class="dun">
+				<img src="img/dunpai/shield_1_01.png" alt="">
+				<img src="img/dunpai/shield_1_02.png" alt="">
+				<img src="img/dunpai/shield_1_03.png" alt="">
+				<img src="img/dunpai/shield_1_04.png" alt="">
+				<img src="img/dunpai/shield_1_05.png" alt="">
+				<img src="img/dunpai/shield_1_06.png" alt="">
+				<img src="img/dunpai/shield_1_07.png" alt="">
+				<img src="img/dunpai/shield_1_08.png" alt="">
+				<img src="img/dunpai/shield_1_09.png" alt="">
+			</div>
+		</section>
+	</body>
+</html>
